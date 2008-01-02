@@ -10,6 +10,7 @@ Source0: %{name}.tar.bz2
 License: BSD
 Group: System/Libraries
 Url: http://www.ndesk.org/NotifySharp
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mono-devel
 BuildRequires: monodoc
 BuildRequires: gtk-sharp2
