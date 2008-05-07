@@ -16,7 +16,7 @@ BuildRequires: monodoc
 BuildRequires: gtk-sharp2
 BuildRequires: ndesk-dbus-glib
 BuildArch: noarch
-%define _requires_exceptions ^lib.*
+%define _requires_exceptions lib.*glib
 
 %description
 notify-sharp is a C# client implementation for Desktop Notifications,
