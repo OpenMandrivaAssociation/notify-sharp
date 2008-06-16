@@ -1,6 +1,6 @@
 %define name notify-sharp
 %define version 0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: C# desktop notification client
 Name: %{name}
