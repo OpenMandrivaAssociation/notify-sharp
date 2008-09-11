@@ -1,13 +1,13 @@
 %define name notify-sharp
-%define version 0
-%define release %mkrel 2
+%define version 0.4.0
+%define release %mkrel 1
 
 Summary: C# desktop notification client
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}.tar.bz2
-License: BSD
+Source0: %{name}-%version.tar.gz
+License: MIT
 Group: System/Libraries
 Url: http://www.ndesk.org/NotifySharp
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -40,10 +40,7 @@ Monodoc format.
 
 
 %prep
-%setup -q -n %name
-aclocal
-autoconf
-automake -a -c
+%setup -q
 
 %build
 ./configure --prefix=%_prefix
