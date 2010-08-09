@@ -1,6 +1,6 @@
 %define name notify-sharp
 %define version 0.4.0
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary: C# desktop notification client
 Name: %{name}
@@ -14,7 +14,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mono-devel
 BuildRequires: monodoc
 BuildRequires: gtk-sharp2
-BuildRequires: ndesk-dbus-glib
+BuildRequires: ndesk-dbus-glib-devel
 BuildArch: noarch
 %define _requires_exceptions lib.*glib
 
@@ -27,6 +27,20 @@ notifications on the Linux desktop. These are designed to notify the
 user of something without interrupting their work with a dialog box
 that they must close. Passive popups can automatically disappear after
 a short period of time.
+
+%package devel
+Summary: Development files for %name
+Group: Development/Other
+Requires: %name = %version-%release
+
+%description devel
+dbus-sharp is a C# implementation of D-Bus. It's often referred to as
+"managed D-Bus" to avoid confusion with existing bindings (which wrap
+libdbus).
+
+D-Bus is an inter-process communication framework that lets
+applications interface with the system event bus as well as allowing
+them to talk to one another in a peer-to-peer configuration.
 
 %package doc
 Summary: Development documentation for %name
@@ -62,9 +76,13 @@ fi
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS NEWS README
 %_prefix/lib/mono/gac/notify-sharp
 %_prefix/lib/mono/notify-sharp
+
+%files devel
+%defattr(-,root,root)
+%doc ChangeLog
 %_datadir/pkgconfig/notify-sharp.pc
 
 %files doc
