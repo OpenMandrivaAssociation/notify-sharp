@@ -61,11 +61,11 @@ Monodoc format.
 make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std pkgconfigdir=%_datadir/pkgconfig
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %post doc
 %_bindir/monodoc --make-index > /dev/null
