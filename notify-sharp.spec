@@ -1,7 +1,7 @@
 Summary:	C Sharp desktop notification client
 Name:		notify-sharp
 Version:	0.4.0
-Release:	10
+Release:	11
 License:	MIT
 Group:		System/Libraries
 Url:		http://www.ndesk.org/NotifySharp
