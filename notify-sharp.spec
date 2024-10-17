@@ -4,7 +4,7 @@ Version:	0.4.0
 Release:	16
 License:	MIT
 Group:		System/Libraries
-Url:		http://www.ndesk.org/NotifySharp
+Url:		https://www.ndesk.org/NotifySharp
 Source0:	%{name}-%version.tar.gz
 BuildArch:	noarch
 BuildRequires:	monodoc
