@@ -7,6 +7,11 @@ Group:		System/Libraries
 Url:		https://www.ndesk.org/NotifySharp
 Source0:	%{name}-%version.tar.gz
 BuildArch:	noarch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	monodoc
 BuildRequires:	pkgconfig(gtk-sharp-2.0)
 BuildRequires:	pkgconfig(mono)
